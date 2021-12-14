@@ -9,7 +9,9 @@
   {% for student in object_list %}
     <li>{{ student.name }} {{ student.group }} <br> Преподаватель: {{ student.teacher.name }} {{ student.teacher.subject }}</li>
   {% endfor %}
-  
+  {% for obj_teacher in object.teachers.all %}
+    <p>{{ obj_teacher.name }}</p>
+  {% endfor %}
   </ul>
 </div>
 {% endblock %}
